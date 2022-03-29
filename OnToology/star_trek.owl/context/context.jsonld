@@ -1,0 +1,141 @@
+{
+  "@context" : {
+    "takesPlace" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#takesPlace",
+      "@type" : "@id"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "participates" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#participates",
+      "@type" : "@id"
+    },
+    "hasActor" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasActor",
+      "@type" : "@id"
+    },
+    "Ferengi" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Ferengi"
+    },
+    "Android" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Android"
+    },
+    "Evolutive_Life" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Evolutive_Life"
+    },
+    "Star" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Star"
+    },
+    "Voluntary" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Voluntary"
+    },
+    "Human" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Human"
+    },
+    "isIn" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#isIn",
+      "@type" : "@id"
+    },
+    "Spacial_Station" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Spacial_Station"
+    },
+    "Forced" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Forced"
+    },
+    "hasBirthPlace" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasBirthPlace",
+      "@type" : "@id"
+    },
+    "Vulcan" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Vulcan"
+    },
+    "Wormhole" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Wormhole"
+    },
+    "orbits" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#orbits",
+      "@type" : "@id"
+    },
+    "Slave" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Slave"
+    },
+    "Winner" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Winner"
+    },
+    "hasGender" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasGender",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
+    "Characteristics" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Characteristics"
+    },
+    "Battle" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Battle"
+    },
+    "Cardassian" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Cardassian"
+    },
+    "Quadrant" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Quadrant"
+    },
+    "Place" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Place"
+    },
+    "Planet" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Planet"
+    },
+    "hasAlliance" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasAlliance",
+      "@type" : "@id"
+    },
+    "Satellite" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Satellite"
+    },
+    "hasWinner" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasWinner",
+      "@type" : "@id"
+    },
+    "Romulan" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Romulan"
+    },
+    "Tragedy" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Tragedy"
+    },
+    "City" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#City"
+    },
+    "Holograms" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Holograms"
+    },
+    "Artificial_Life" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Artificial_Life"
+    },
+    "Nebula" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Nebula"
+    },
+    "Alliance" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alliance"
+    },
+    "sameAs" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#sameAs"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "hasEnemy" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasEnemy",
+      "@type" : "@id"
+    },
+    "Sentient_Life" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Sentient_Life"
+    },
+    "hasCasualties" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasCasualties",
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "Klingon" : {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Klingon"
+    }
+  }
+}

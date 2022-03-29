@@ -1,0 +1,835 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alliance"
+    }, {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Sentient_Life"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Quadrant"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasBirthPlace"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alliance"
+    }, {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Battle"
+    }, {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Place"
+    }, {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Sentient_Life"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Cardassian"
+    }, {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Ferengi"
+    }, {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Human"
+    }, {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Klingon"
+    }, {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Romulan"
+    }, {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Vulcan"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid23",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
+  "http://www.w3.org/2003/11/swrl#body" : [ {
+    "@list" : [ {
+      "@id" : "_:genid31"
+    }, {
+      "@id" : "_:genid29"
+    }, {
+      "@id" : "_:genid25"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#head" : [ {
+    "@list" : [ {
+      "@id" : "_:genid33"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid25",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#BuiltinAtom" ],
+  "http://www.w3.org/2003/11/swrl#arguments" : [ {
+    "@list" : [ {
+      "@id" : "urn:swrl:var#c"
+    }, {
+      "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+      "@value" : "10000"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#builtin" : [ {
+    "@id" : "http://www.w3.org/2003/11/swrlb#greaterThan"
+  } ]
+}, {
+  "@id" : "_:genid29",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#b"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "urn:swrl:var#c"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasCasualties"
+  } ]
+}, {
+  "@id" : "_:genid31",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#b"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Battle"
+  } ]
+}, {
+  "@id" : "_:genid33",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#b"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Tragedy"
+  } ]
+}, {
+  "@id" : "_:genid34",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
+  "http://www.w3.org/2003/11/swrl#body" : [ {
+    "@list" : [ {
+      "@id" : "_:genid40"
+    }, {
+      "@id" : "_:genid38"
+    }, {
+      "@id" : "_:genid36"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#head" : [ {
+    "@list" : [ {
+      "@id" : "_:genid42"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid36",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#alliance"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Forced"
+  } ]
+}, {
+  "@id" : "_:genid38",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#p"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "urn:swrl:var#alliance"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasAlliance"
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alliance"
+    }, {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Sentient_Life"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid40",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#p"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Sentient_Life"
+  } ]
+}, {
+  "@id" : "_:genid42",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#p"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Slave"
+  } ]
+}, {
+  "@id" : "_:genid43",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Imp" ],
+  "http://www.w3.org/2003/11/swrl#body" : [ {
+    "@list" : [ {
+      "@id" : "_:genid51"
+    }, {
+      "@id" : "_:genid49"
+    }, {
+      "@id" : "_:genid47"
+    }, {
+      "@id" : "_:genid45"
+    } ]
+  } ],
+  "http://www.w3.org/2003/11/swrl#head" : [ {
+    "@list" : [ {
+      "@id" : "_:genid53"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid45",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#battle"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "urn:swrl:var#alliance"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasWinner"
+  } ]
+}, {
+  "@id" : "_:genid47",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#p"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "urn:swrl:var#alliance"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasAlliance"
+  } ]
+}, {
+  "@id" : "_:genid49",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#IndividualPropertyAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#p"
+  } ],
+  "http://www.w3.org/2003/11/swrl#argument2" : [ {
+    "@id" : "urn:swrl:var#battle"
+  } ],
+  "http://www.w3.org/2003/11/swrl#propertyPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#participates"
+  } ]
+}, {
+  "@id" : "_:genid51",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#p"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Sentient_Life"
+  } ]
+}, {
+  "@id" : "_:genid53",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#ClassAtom" ],
+  "http://www.w3.org/2003/11/swrl#argument1" : [ {
+    "@id" : "urn:swrl:var#p"
+  } ],
+  "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Winner"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Planet"
+    }, {
+      "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Satellite"
+    } ]
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Autor: Jose Antonio Rabal Segura"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "@value" : "1.0"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#40_Eridani_A",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#isIn" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Beta"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Star"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#40_Eridani_B",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#isIn" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Beta"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Star"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alliance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Representa una alianza entre distintas formas de vida."
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alpha",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#isIn" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alpha"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Quadrant"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Android",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Artificial_Life"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Artificial_Life",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Representa vida creada artificialmente."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Sentient_Life"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Evolutive_Life"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Battle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Esta clase representa batallas producidas en el universo"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Beta",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Quadrant"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Borg",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasEnemy" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Federation"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Forced"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Cardassian",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Representa a los seres originarios de Cardassia Prime"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Evolutive_Life"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Characteristics",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Representa características que se pueden inferir para las instancias de Sentient_life"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#City",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Representa una ciudad en un planeta."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#sameAs" : [ {
+    "@value" : "https://dbpedia.org/ontology/city"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Planet"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Commander_Data",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasAlliance" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Federation"
+  } ],
+  "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasBirthPlace" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Omicron_Theta"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Android"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Earth",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#orbits" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Sun"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Planet"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Evolutive_Life",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Representa vida orginida a través de la evolución, sin intervención de otros seres."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Sentient_Life"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Federation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasEnemy" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Borg"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Voluntary"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Ferengi",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Representa a los seres originarios de Ferenginar"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Evolutive_Life"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Forced",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Representa una alianza de naturaleza forzada, no libre."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alliance"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Holograms",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Artificial_Life"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Human",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Representa a los seres originarios del planeta Tierra"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Evolutive_Life"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Jean-Luc_Picard",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasAlliance" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Federation"
+  } ],
+  "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasBirthPlace" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Earth"
+  } ],
+  "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasGender" : [ {
+    "@value" : "male"
+  } ],
+  "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#participates" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#The_Best_of_both_Worlds"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Human"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Klingon",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Representa a los seres originarios de Kronos"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Evolutive_Life"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#La_Barre",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#isIn" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Earth"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#City"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Nebula",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Representa una nube de gas y polvo."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Quadrant"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Omicron_Theta",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Planet"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Place",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Representa lugares en el universo."
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Planet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Representa cuerpos que orbitan estrellas"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#sameAs" : [ {
+    "@value" : "https://dbpedia.org/ontology/Planet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Star"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Quadrant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Representa una galaxia en el univero Star Trek"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Place"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Romulan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Representa a los seres originarios de Romulus"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Evolutive_Life"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Satellite",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Representa cuerpos que orbitan planetas"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Star"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Sentient_Life",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Representa una forma de vida inteligente."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid10"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Siete_de_Nueve",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasAlliance" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Borg"
+  } ],
+  "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasBirthPlace" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Earth"
+  } ],
+  "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasGender" : [ {
+    "@value" : "female"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Human"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Slave",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Representa una instancia de sentient_life que pertenece a una alianza forzada"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Characteristics"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Spacial_Station",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Representa una estación espacial creado por seres vivos."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Quadrant"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Star",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Representa el tipo de astro estrella"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#sameAs" : [ {
+    "@value" : "https://dbpedia.org/ontology/Star"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Quadrant"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Sun",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#isIn" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alpha"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Star"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#The_Best_of_both_Worlds",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasActor" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Borg"
+  }, {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Federation"
+  } ],
+  "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasCasualties" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "50000"
+  } ],
+  "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasWinner" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Federation"
+  } ],
+  "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#takesPlace" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Beta"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Battle"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Tragedy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Representa un tipo de batalla con muchas bajas"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Battle"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Voluntary",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Representa una alianza libre entre seres."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alliance"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Vulcan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#orbits" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#40_Eridani_A"
+  }, {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#40_Eridani_B"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Planet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Representa a los seres originarios de Vulcan"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Evolutive_Life"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Winner",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Representa a una instancia de Sentient_life que ha ganado una batalla"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Characteristics"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Wormhole",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Representa un \"camino\" entre distintos cuadrantes del universo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Place"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasActor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Representa que una clase de la instancia Battle tiene participantes."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Battle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid1"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasAlliance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Representa que un ser puede formar parte de una alianza."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Sentient_Life"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alliance"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasBirthPlace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Representa que un ser tiene que tener un lugar de nacimiento de Clase Place"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Sentient_Life"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Quadrant"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasCasualties",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Representa que una instancia de la clase Battle tiene un número de afectados."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Battle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasEnemy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Representa que una alianza puede tener uno o varios enemigos de clase Alliance o Sentient_Life."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alliance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid4"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasGender",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Representa que una instancia de Evolutive_life tiene género."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Evolutive_Life"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasWinner",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Battle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alliance"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#isIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Representa que un lugar contiene a otro, por ejemplo, una ciudad está en un planeta"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Quadrant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Quadrant"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#orbits",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Representa que un planeta o satélite orbita una estrella."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid7"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Star"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#participates",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Representa que una instancia de la clase Sentient_life puede participar en una batalla"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Sentient_Life"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Battle"
+  } ]
+}, {
+  "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#takesPlace",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Reprenta que una instancia de la Clase Battle tiene un lugar donde se produce."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Battle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Place"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2000/01/rdf-schema#sameAs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#Thing",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "La ontologia trata sobre la serie Star Trek: The Next Generation\nAutor: Jose Antonio Rabal Segura"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2003/11/swrlb#greaterThan",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Builtin" ]
+}, {
+  "@id" : "urn:swrl:var#alliance",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "urn:swrl:var#b",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "urn:swrl:var#battle",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "urn:swrl:var#c",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+}, {
+  "@id" : "urn:swrl:var#p",
+  "@type" : [ "http://www.w3.org/2003/11/swrl#Variable" ]
+} ]
