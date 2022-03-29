@@ -1,0 +1,546 @@
+@prefix : <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#> .
+
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek> rdf:type owl:Ontology ;
+                                                               rdfs:comment "Autor: Jose Antonio Rabal Segura" ;
+                                                               owl:versionInfo 1.0 .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2000/01/rdf-schema#sameAs
+rdfs:sameAs rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasActor
+:hasActor rdf:type owl:ObjectProperty ;
+          rdfs:domain :Battle ;
+          rdfs:range [ rdf:type owl:Class ;
+                       owl:unionOf ( :Alliance
+                                     :Sentient_Life
+                                   )
+                     ] ;
+          rdfs:comment "Representa que una clase de la instancia Battle tiene participantes." .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasAlliance
+:hasAlliance rdf:type owl:ObjectProperty ;
+             rdfs:domain :Sentient_Life ;
+             rdfs:range :Alliance ;
+             rdfs:comment "Representa que un ser puede formar parte de una alianza." .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasBirthPlace
+:hasBirthPlace rdf:type owl:ObjectProperty ;
+               rdfs:domain :Sentient_Life ;
+               rdfs:range :Quadrant ;
+               rdfs:comment "Representa que un ser tiene que tener un lugar de nacimiento de Clase Place" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasEnemy
+:hasEnemy rdf:type owl:ObjectProperty ;
+          rdfs:domain :Alliance ;
+          rdfs:range [ rdf:type owl:Class ;
+                       owl:unionOf ( :Alliance
+                                     :Sentient_Life
+                                   )
+                     ] ;
+          rdfs:comment "Representa que una alianza puede tener uno o varios enemigos de clase Alliance o Sentient_Life." .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasWinner
+:hasWinner rdf:type owl:ObjectProperty ;
+           rdfs:domain :Battle ;
+           rdfs:range :Alliance .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#isIn
+:isIn rdf:type owl:ObjectProperty ;
+      rdfs:domain :Quadrant ;
+      rdfs:range :Quadrant ;
+      rdfs:comment "Representa que un lugar contiene a otro, por ejemplo, una ciudad está en un planeta" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#orbits
+:orbits rdf:type owl:ObjectProperty ;
+        rdfs:domain [ rdf:type owl:Class ;
+                      owl:unionOf ( :Planet
+                                    :Satellite
+                                  )
+                    ] ;
+        rdfs:range :Star ;
+        rdfs:comment "Representa que un planeta o satélite orbita una estrella." .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#participates
+:participates rdf:type owl:ObjectProperty ;
+              rdfs:domain :Sentient_Life ;
+              rdfs:range :Battle ;
+              rdfs:comment "Representa que una instancia de la clase Sentient_life puede participar en una batalla" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#takesPlace
+:takesPlace rdf:type owl:ObjectProperty ;
+            rdfs:domain :Battle ;
+            rdfs:range :Place ;
+            rdfs:comment "Reprenta que una instancia de la Clase Battle tiene un lugar donde se produce." .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasCasualties
+:hasCasualties rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Battle ;
+               rdfs:range xsd:integer ;
+               rdfs:comment "Representa que una instancia de la clase Battle tiene un número de afectados." .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasGender
+:hasGender rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Evolutive_Life ;
+           rdfs:range xsd:string ;
+           rdfs:comment "Representa que una instancia de Evolutive_life tiene género." .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alliance
+:Alliance rdf:type owl:Class ;
+          rdfs:comment "Representa una alianza entre distintas formas de vida." .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Android
+:Android rdf:type owl:Class ;
+         rdfs:subClassOf :Artificial_Life .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Artificial_Life
+:Artificial_Life rdf:type owl:Class ;
+                 rdfs:subClassOf :Sentient_Life ;
+                 owl:disjointWith :Evolutive_Life ;
+                 rdfs:comment "Representa vida creada artificialmente." .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Battle
+:Battle rdf:type owl:Class ;
+        rdfs:comment "Esta clase representa batallas producidas en el universo" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Cardassian
+:Cardassian rdf:type owl:Class ;
+            rdfs:subClassOf :Evolutive_Life ;
+            rdfs:comment "Representa a los seres originarios de Cardassia Prime" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Characteristics
+:Characteristics rdf:type owl:Class ;
+                 rdfs:comment "Representa características que se pueden inferir para las instancias de Sentient_life" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#City
+:City rdf:type owl:Class ;
+      rdfs:subClassOf :Planet ;
+      rdfs:comment "Representa una ciudad en un planeta." ;
+      rdfs:sameAs "https://dbpedia.org/ontology/city" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Evolutive_Life
+:Evolutive_Life rdf:type owl:Class ;
+                rdfs:subClassOf :Sentient_Life ;
+                rdfs:comment "Representa vida orginida a través de la evolución, sin intervención de otros seres." .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Ferengi
+:Ferengi rdf:type owl:Class ;
+         rdfs:subClassOf :Evolutive_Life ;
+         rdfs:comment "Representa a los seres originarios de Ferenginar" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Forced
+:Forced rdf:type owl:Class ;
+        rdfs:subClassOf :Alliance ;
+        rdfs:comment "Representa una alianza de naturaleza forzada, no libre." .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Holograms
+:Holograms rdf:type owl:Class ;
+           rdfs:subClassOf :Artificial_Life .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Human
+:Human rdf:type owl:Class ;
+       rdfs:subClassOf :Evolutive_Life ;
+       rdfs:comment "Representa a los seres originarios del planeta Tierra" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Klingon
+:Klingon rdf:type owl:Class ;
+         rdfs:subClassOf :Evolutive_Life ;
+         rdfs:comment "Representa a los seres originarios de Kronos" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Nebula
+:Nebula rdf:type owl:Class ;
+        rdfs:subClassOf :Quadrant ;
+        rdfs:comment "Representa una nube de gas y polvo." .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Place
+:Place rdf:type owl:Class ;
+       rdfs:comment "Representa lugares en el universo." .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Planet
+:Planet rdf:type owl:Class ;
+        rdfs:subClassOf :Star ;
+        rdfs:comment "Representa cuerpos que orbitan estrellas" ;
+        rdfs:sameAs "https://dbpedia.org/ontology/Planet" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Quadrant
+:Quadrant rdf:type owl:Class ;
+          rdfs:subClassOf :Place ;
+          rdfs:comment "Representa una galaxia en el univero Star Trek" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Romulan
+:Romulan rdf:type owl:Class ;
+         rdfs:subClassOf :Evolutive_Life ;
+         rdfs:comment "Representa a los seres originarios de Romulus" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Satellite
+:Satellite rdf:type owl:Class ;
+           rdfs:subClassOf :Star ;
+           rdfs:comment "Representa cuerpos que orbitan planetas" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Sentient_Life
+:Sentient_Life rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasBirthPlace ;
+                                 owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                 owl:onClass :Quadrant
+                               ] ;
+               rdfs:comment "Representa una forma de vida inteligente." .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Slave
+:Slave rdf:type owl:Class ;
+       rdfs:subClassOf :Characteristics ;
+       rdfs:comment "Representa una instancia de sentient_life que pertenece a una alianza forzada" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Spacial_Station
+:Spacial_Station rdf:type owl:Class ;
+                 rdfs:subClassOf :Quadrant ;
+                 rdfs:comment "Representa una estación espacial creado por seres vivos." .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Star
+:Star rdf:type owl:Class ;
+      rdfs:subClassOf :Quadrant ;
+      rdfs:comment "Representa el tipo de astro estrella" ;
+      rdfs:sameAs "https://dbpedia.org/ontology/Star" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Tragedy
+:Tragedy rdf:type owl:Class ;
+         rdfs:subClassOf :Battle ;
+         rdfs:comment "Representa un tipo de batalla con muchas bajas" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Voluntary
+:Voluntary rdf:type owl:Class ;
+           rdfs:subClassOf :Alliance ;
+           rdfs:comment "Representa una alianza libre entre seres." .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Vulcan
+:Vulcan rdf:type owl:Class ;
+        rdfs:subClassOf :Evolutive_Life .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Winner
+:Winner rdf:type owl:Class ;
+        rdfs:subClassOf :Characteristics ;
+        rdfs:comment "Representa a una instancia de Sentient_life que ha ganado una batalla" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Wormhole
+:Wormhole rdf:type owl:Class ;
+          rdfs:subClassOf :Place ;
+          rdfs:comment "Representa un \"camino\" entre distintos cuadrantes del universo" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alpha
+:Alpha rdf:type owl:NamedIndividual ,
+                :Quadrant ;
+       :isIn :Alpha .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Beta
+:Beta rdf:type owl:NamedIndividual ,
+               :Quadrant .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Borg
+:Borg rdf:type owl:NamedIndividual ,
+               :Forced ;
+      :hasEnemy :Federation .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Commander_Data
+:Commander_Data rdf:type owl:NamedIndividual ,
+                         :Android ;
+                :hasAlliance :Federation ;
+                :hasBirthPlace :Omicron_Theta .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Earth
+:Earth rdf:type owl:NamedIndividual ,
+                :Planet ;
+       :orbits :Sun .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Federation
+:Federation rdf:type owl:NamedIndividual ,
+                     :Voluntary ;
+            :hasEnemy :Borg .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Jean-Luc_Picard
+:Jean-Luc_Picard rdf:type owl:NamedIndividual ,
+                          :Human ;
+                 :hasAlliance :Federation ;
+                 :hasBirthPlace :Earth ;
+                 :participates :The_Best_of_both_Worlds ;
+                 :hasGender "male" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#La_Barre
+:La_Barre rdf:type owl:NamedIndividual ,
+                   :City ;
+          :isIn :Earth .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Omicron_Theta
+:Omicron_Theta rdf:type owl:NamedIndividual ,
+                        :Planet .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Siete_de_Nueve
+:Siete_de_Nueve rdf:type owl:NamedIndividual ,
+                         :Human ;
+                :hasAlliance :Borg ;
+                :hasBirthPlace :Earth ;
+                :hasGender "female" .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Sun
+:Sun rdf:type owl:NamedIndividual ,
+              :Star ;
+     :isIn :Alpha .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#The_Best_of_both_Worlds
+:The_Best_of_both_Worlds rdf:type owl:NamedIndividual ,
+                                  :Battle ;
+                         :hasActor :Borg ,
+                                   :Federation ;
+                         :hasWinner :Federation ;
+                         :takesPlace :Beta ;
+                         :hasCasualties 50000 .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Vulcan
+:Vulcan rdf:type owl:NamedIndividual ,
+                 :Planet ;
+        :orbits <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#40_Eridani_A> ,
+                <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#40_Eridani_B> .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#40_Eridani_A
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#40_Eridani_A> rdf:type owl:NamedIndividual ,
+                                                                                    :Star ;
+                                                                           :isIn :Beta .
+
+
+###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#40_Eridani_B
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#40_Eridani_B> rdf:type owl:NamedIndividual ,
+                                                                                    :Star ;
+                                                                           :isIn :Beta .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:Vulcan rdfs:comment "Representa a los seres originarios de Vulcan" .
+
+
+owl:Thing rdfs:comment """La ontologia trata sobre la serie Star Trek: The Next Generation
+Autor: Jose Antonio Rabal Segura""" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Alliance
+                :Battle
+                :Place
+                :Sentient_Life
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Cardassian
+                :Ferengi
+                :Human
+                :Klingon
+                :Romulan
+                :Vulcan
+              )
+] .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<urn:swrl:var#b> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#c> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#p> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#alliance> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#battle> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Battle ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#b>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasCasualties ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#b> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#c>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <urn:swrl:var#c> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 10000 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Tragedy ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#b>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Sentient_Life ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasAlliance ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#alliance>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#classPredicate> :Forced ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#alliance>
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Slave ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Sentient_Life ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :participates ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#battle>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasAlliance ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#alliance>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasWinner ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#battle> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#alliance>
+                                                                                      ] ;
+                                                                            rdf:rest rdf:nil
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Winner ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
