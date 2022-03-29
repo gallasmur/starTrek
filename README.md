@@ -1,2 +1,0 @@
-# starTrek
-Star Trek Ontology
