@@ -1,5 +1,9 @@
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek> <http://www.w3.org/2000/01/rdf-schema#comment> "Autor: Jose Antonio Rabal Segura" .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek> <http://purl.org/dc/elements/1.1/creator> "José Antonio Rabal Segura" .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek> <http://purl.org/dc/elements/1.1/description> "This ontology describe the series Star Trek: The Next Generation, its beings, its planets and its battles." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek> <http://purl.org/dc/elements/1.1/rights> "https://creativecommons.org/licenses/by/4.0/legalcode" .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek> <http://purl.org/dc/terms/created> "04/04/2022" .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek> <http://purl.org/dc/terms/title> "Star Trek: The Next Generation" .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 # 
 # 
@@ -10,8 +14,29 @@
 # #################################################################
 # 
 # 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/rights
+<http://purl.org/dc/elements/1.1/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # http://www.w3.org/2000/01/rdf-schema#sameAs
 <http://www.w3.org/2000/01/rdf-schema#sameAs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2002/07/owl#equivalentClass
+<http://www.w3.org/2002/07/owl#equivalentClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # 
 # 
@@ -34,19 +59,22 @@ _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alliance> .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasActor> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa que una clase de la instancia Battle tiene participantes." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasActor> <http://www.w3.org/2000/01/rdf-schema#comment> "Represent the relation between a Battle and its participants." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasActor> <http://www.w3.org/2000/01/rdf-schema#label> "hasActor"@en .
 # 
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasAlliance
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasAlliance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasAlliance> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Sentient_Life> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasAlliance> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alliance> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasAlliance> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa que un ser puede formar parte de una alianza." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasAlliance> <http://www.w3.org/2000/01/rdf-schema#comment> "Represent the relation between a being and its alliance." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasAlliance> <http://www.w3.org/2000/01/rdf-schema#label> "hasAlliance"@en .
 # 
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasBirthPlace
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasBirthPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasBirthPlace> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Sentient_Life> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasBirthPlace> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Quadrant> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasBirthPlace> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa que un ser tiene que tener un lugar de nacimiento de Clase Place" .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasBirthPlace> <http://www.w3.org/2000/01/rdf-schema#comment> "Represent the relation between a being and its birth place." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasBirthPlace> <http://www.w3.org/2000/01/rdf-schema#label> "hasBirthPlace"@en .
 # 
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasEnemy
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasEnemy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -60,44 +88,68 @@ _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alliance> .
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasEnemy> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa que una alianza puede tener uno o varios enemigos de clase Alliance o Sentient_Life." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasEnemy> <http://www.w3.org/2000/01/rdf-schema#comment> "Represent the relation between an alliance and its enemies, that can be Alliance or Sentient_Life." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasEnemy> <http://www.w3.org/2000/01/rdf-schema#label> "hasEnemy"@en .
 # 
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasWinner
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasWinner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasWinner> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Battle> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasWinner> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alliance> .
-# 
-# http://www.semanticweb.org/user/ontologies/2022/2/star-trek#isIn
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#isIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#isIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Quadrant> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#isIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Quadrant> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#isIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa que un lugar contiene a otro, por ejemplo, una ciudad está en un planeta" .
-# 
-# http://www.semanticweb.org/user/ontologies/2022/2/star-trek#orbits
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#orbits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#orbits> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid7 .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasWinner> <http://www.w3.org/2000/01/rdf-schema#range> _:genid7 .
 _:genid7 <http://www.w3.org/2002/07/owl#unionOf> _:genid9 .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Satellite> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Sentient_Life> .
 _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Planet> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alliance> .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#orbits> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Star> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#orbits> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa que un planeta o satélite orbita una estrella." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasWinner> <http://www.w3.org/2000/01/rdf-schema#comment> "Represent the relation between a battle and the winner." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasWinner> <http://www.w3.org/2000/01/rdf-schema#label> "hasWinner"@en .
+# 
+# http://www.semanticweb.org/user/ontologies/2022/2/star-trek#isIn
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#isIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#isIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#isIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Quadrant> .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#isIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Quadrant> .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#isIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Represent the relation between a place and where is located. For instance, a city isIn a planet." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#isIn> <http://www.w3.org/2000/01/rdf-schema#label> "isIn"@en .
+# 
+# http://www.semanticweb.org/user/ontologies/2022/2/star-trek#orbits
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#orbits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#orbits> <http://www.w3.org/2000/01/rdf-schema#domain> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#unionOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Satellite> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Planet> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#orbits> <http://www.w3.org/2000/01/rdf-schema#range> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#unionOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Star> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Planet> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#orbits> <http://www.w3.org/2000/01/rdf-schema#comment> "Represent the relation between a Planet or Satellite and the celestial body it orbits." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#orbits> <http://www.w3.org/2000/01/rdf-schema#label> "orbits"@en .
 # 
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#participates
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#participates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#participates> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Sentient_Life> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#participates> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Battle> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#participates> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa que una instancia de la clase Sentient_life puede participar en una batalla" .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#participates> <http://www.w3.org/2000/01/rdf-schema#comment> "Represent the relation between a being and its participance in a battle." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#participates> <http://www.w3.org/2000/01/rdf-schema#label> "participates"@en .
 # 
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#takesPlace
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#takesPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#takesPlace> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Battle> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#takesPlace> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Place> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#takesPlace> <http://www.w3.org/2000/01/rdf-schema#comment> "Reprenta que una instancia de la Clase Battle tiene un lugar donde se produce." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#takesPlace> <http://www.w3.org/2000/01/rdf-schema#comment> "Represent the relation between a battle and the Place where it takes place." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#takesPlace> <http://www.w3.org/2000/01/rdf-schema#label> "takesPlace"@en .
 # 
 # 
 # 
@@ -112,13 +164,15 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasCasualties> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasCasualties> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Battle> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasCasualties> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasCasualties> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa que una instancia de la clase Battle tiene un número de afectados." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasCasualties> <http://www.w3.org/2000/01/rdf-schema#comment> "Represent the number of casualties that happened in a battle." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasCasualties> <http://www.w3.org/2000/01/rdf-schema#label> "hasCasualties"@en .
 # 
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasGender
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasGender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasGender> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Evolutive_Life> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasGender> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasGender> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa que una instancia de Evolutive_life tiene género." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasGender> <http://www.w3.org/2000/01/rdf-schema#comment> "Represent the gender of an instance of Evolutive_life." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasGender> <http://www.w3.org/2000/01/rdf-schema#label> "hasGender"@en .
 # 
 # 
 # 
@@ -131,130 +185,160 @@ _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alliance
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alliance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alliance> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa una alianza entre distintas formas de vida." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alliance> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Characteristics> .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alliance> <http://www.w3.org/2000/01/rdf-schema#comment> "Reprents an alliance between differents forms of life." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alliance> <http://www.w3.org/2000/01/rdf-schema#label> "Alliance"@en .
 # 
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Android
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Android> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Android> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Artificial_Life> .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Android> <http://www.w3.org/2000/01/rdf-schema#comment> "Represent a kind of artificial life in human form."@es .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Android> <http://www.w3.org/2000/01/rdf-schema#label> "Android"@en .
 # 
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Artificial_Life
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Artificial_Life> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Artificial_Life> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Sentient_Life> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Artificial_Life> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Evolutive_Life> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Artificial_Life> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa vida creada artificialmente." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Artificial_Life> <http://www.w3.org/2000/01/rdf-schema#comment> "Represent life created artificially." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Artificial_Life> <http://www.w3.org/2000/01/rdf-schema#label> "Artificial_Life"@en .
 # 
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Battle
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Battle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Battle> <http://www.w3.org/2000/01/rdf-schema#comment> "Esta clase representa batallas producidas en el universo" .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Battle> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Characteristics> .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Battle> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents battles that happened in the universe." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Battle> <http://www.w3.org/2000/01/rdf-schema#label> "Battle"@en .
 # 
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Cardassian
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Cardassian> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Cardassian> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Evolutive_Life> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Cardassian> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa a los seres originarios de Cardassia Prime" .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Cardassian> <http://www.w3.org/2000/01/rdf-schema#comment> "Represent beings from Cardassia Prime." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Cardassian> <http://www.w3.org/2000/01/rdf-schema#label> "Cardassian"@en .
 # 
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Characteristics
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Characteristics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Characteristics> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa características que se pueden inferir para las instancias de Sentient_life" .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Characteristics> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents characteristics that can be inferred from instances of Sentient_Life." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Characteristics> <http://www.w3.org/2000/01/rdf-schema#label> "Characteristics"@en .
 # 
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#City
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#City> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#City> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Planet> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#City> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa una ciudad en un planeta." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#City> <http://www.w3.org/2000/01/rdf-schema#comment> "Represent a city." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#City> <http://www.w3.org/2000/01/rdf-schema#label> "City"@en .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#City> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/ontology/city" .
 # 
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Evolutive_Life
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Evolutive_Life> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Evolutive_Life> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Sentient_Life> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Evolutive_Life> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa vida orginida a través de la evolución, sin intervención de otros seres." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Evolutive_Life> <http://www.w3.org/2000/01/rdf-schema#comment> "Represent organic life created by evolution." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Evolutive_Life> <http://www.w3.org/2000/01/rdf-schema#label> "Evolutive_Life"@en .
 # 
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Ferengi
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Ferengi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Ferengi> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Evolutive_Life> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Ferengi> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa a los seres originarios de Ferenginar" .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Ferengi> <http://www.w3.org/2000/01/rdf-schema#comment> "Represent beings from Ferenginar." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Ferengi> <http://www.w3.org/2000/01/rdf-schema#label> "Ferengi"@en .
 # 
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Forced
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Forced> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Forced> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alliance> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Forced> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa una alianza de naturaleza forzada, no libre." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Forced> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Voluntary> .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Forced> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents an alliance of forced nature, in opposed to a free one." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Forced> <http://www.w3.org/2000/01/rdf-schema#label> "Forced"@en .
 # 
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Holograms
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Holograms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Holograms> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Artificial_Life> .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Holograms> <http://www.w3.org/2000/01/rdf-schema#comment> "Represent a kind of artificial life in hologram form."@es .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Holograms> <http://www.w3.org/2000/01/rdf-schema#label> "Holograms"@en .
 # 
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Human
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Human> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Human> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Evolutive_Life> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Human> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa a los seres originarios del planeta Tierra" .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Human> <http://www.w3.org/2000/01/rdf-schema#comment> "Represent beings from Earth." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Human> <http://www.w3.org/2000/01/rdf-schema#label> "Human"@en .
 # 
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Klingon
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Klingon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Klingon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Evolutive_Life> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Klingon> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa a los seres originarios de Kronos" .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Klingon> <http://www.w3.org/2000/01/rdf-schema#comment> "Reprsent beings from Kronos." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Klingon> <http://www.w3.org/2000/01/rdf-schema#label> "Klingon"@en .
 # 
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Nebula
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Nebula> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Nebula> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Quadrant> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Nebula> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa una nube de gas y polvo." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Nebula> <http://www.w3.org/2000/01/rdf-schema#comment> "Represent a cloud of gas and cosmic dust." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Nebula> <http://www.w3.org/2000/01/rdf-schema#label> "Nebula"@en .
 # 
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Place
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Place> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa lugares en el universo." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Place> <http://www.w3.org/2000/01/rdf-schema#comment> "Represent a place in space." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Place> <http://www.w3.org/2000/01/rdf-schema#label> "Place"@en .
 # 
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Planet
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Planet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Planet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Star> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Planet> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa cuerpos que orbitan estrellas" .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Planet> <http://www.w3.org/2000/01/rdf-schema#comment> "Represent celestial bodies that orbit stars." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Planet> <http://www.w3.org/2000/01/rdf-schema#label> "Planet"@en .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Planet> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/ontology/Planet" .
 # 
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Quadrant
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Quadrant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Quadrant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Place> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Quadrant> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa una galaxia en el univero Star Trek" .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Quadrant> <http://www.w3.org/2000/01/rdf-schema#comment> "Represent a galaxy in the Star Trek universe." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Quadrant> <http://www.w3.org/2000/01/rdf-schema#label> "Quadrant"@en .
 # 
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Romulan
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Romulan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Romulan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Evolutive_Life> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Romulan> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa a los seres originarios de Romulus" .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Romulan> <http://www.w3.org/2000/01/rdf-schema#comment> "Represent beings from Romulus." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Romulan> <http://www.w3.org/2000/01/rdf-schema#label> "Romulan"@en .
 # 
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Satellite
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Satellite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Satellite> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Star> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Satellite> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa cuerpos que orbitan planetas" .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Satellite> <http://www.w3.org/2000/01/rdf-schema#comment> "Represent celestial bodies that orbit planets." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Satellite> <http://www.w3.org/2000/01/rdf-schema#label> "Satellite"@en .
 # 
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Sentient_Life
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Sentient_Life> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Sentient_Life> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
-_:genid10 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Quadrant> .
-_:genid10 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasBirthPlace> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Sentient_Life> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa una forma de vida inteligente." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Sentient_Life> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/2002/07/owl#onClass> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Quadrant> .
+_:genid16 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasBirthPlace> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Sentient_Life> <http://www.w3.org/2000/01/rdf-schema#comment> "Represent an intelligent being." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Sentient_Life> <http://www.w3.org/2000/01/rdf-schema#label> "Sentient_Life"@en .
 # 
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Slave
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Slave> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Slave> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Characteristics> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Slave> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa una instancia de sentient_life que pertenece a una alianza forzada" .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Slave> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents an instace of Sentient_Life who is enrolled in a forced alliance." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Slave> <http://www.w3.org/2000/01/rdf-schema#label> "Slave"@en .
 # 
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Spacial_Station
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Spacial_Station> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Spacial_Station> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Quadrant> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Spacial_Station> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa una estación espacial creado por seres vivos." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Spacial_Station> <http://www.w3.org/2000/01/rdf-schema#comment> "Represent a spacial station created by beings." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Spacial_Station> <http://www.w3.org/2000/01/rdf-schema#label> "Spacial_Station"@en .
 # 
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Star
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Star> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Star> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Quadrant> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Star> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa el tipo de astro estrella" .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Star> <http://www.w3.org/2000/01/rdf-schema#comment> "Represent the kind of celestial object stars." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Star> <http://www.w3.org/2000/01/rdf-schema#label> "Star"@en .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Star> <http://www.w3.org/2000/01/rdf-schema#sameAs> "https://dbpedia.org/ontology/Star" .
 # 
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Tragedy
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Tragedy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Tragedy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Battle> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Tragedy> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa un tipo de batalla con muchas bajas" .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Tragedy> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a battle with a lot of casualties." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Tragedy> <http://www.w3.org/2000/01/rdf-schema#label> "Tragedy"@en .
 # 
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Voluntary
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Voluntary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Voluntary> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alliance> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Voluntary> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa una alianza libre entre seres." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Voluntary> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a free alliance between beings." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Voluntary> <http://www.w3.org/2000/01/rdf-schema#label> "Voluntary"@en .
 # 
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Vulcan
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Vulcan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -263,12 +347,14 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Winner
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Winner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Winner> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Characteristics> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Winner> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa a una instancia de Sentient_life que ha ganado una batalla" .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Winner> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents an instance of Sentient_life who won a battle." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Winner> <http://www.w3.org/2000/01/rdf-schema#label> "Winner"@en .
 # 
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Wormhole
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Wormhole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Wormhole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Place> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Wormhole> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa un \"camino\" entre distintos cuadrantes del universo" .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Wormhole> <http://www.w3.org/2000/01/rdf-schema#comment> "Represent a \"way\" between different quadrants in the universe." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Wormhole> <http://www.w3.org/2000/01/rdf-schema#label> "Wormhole"@en .
 # 
 # 
 # 
@@ -282,7 +368,6 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alpha
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alpha> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alpha> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Quadrant> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alpha> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#isIn> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alpha> .
 # 
 # http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Beta
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Beta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -313,7 +398,7 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Jean-Luc_Picard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Jean-Luc_Picard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Human> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Jean-Luc_Picard> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasAlliance> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Federation> .
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Jean-Luc_Picard> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasBirthPlace> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Earth> .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Jean-Luc_Picard> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasBirthPlace> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#La_Barre> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Jean-Luc_Picard> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#participates> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#The_Best_of_both_Worlds> .
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Jean-Luc_Picard> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasGender> "male" .
 # 
@@ -372,9 +457,12 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # #################################################################
 # 
 # 
-<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Vulcan> <http://www.w3.org/2000/01/rdf-schema#comment> "Representa a los seres originarios de Vulcan" .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Vulcan> <http://www.w3.org/2000/01/rdf-schema#comment> "Represent beings from Vulcan." .
+<http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Vulcan> <http://www.w3.org/2000/01/rdf-schema#label> "Vulcan"@en .
 # 
 <http://www.w3.org/2002/07/owl#Thing> <http://www.w3.org/2000/01/rdf-schema#comment> "La ontologia trata sobre la serie Star Trek: The Next Generation\nAutor: Jose Antonio Rabal Segura" .
+# 
+<http://www.w3.org/2002/07/owl#versionInfo> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"^^<http://www.w3.org/2001/XMLSchema#decimal> .
 # 
 # 
 # 
@@ -385,41 +473,41 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # #################################################################
 # 
 # 
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid11 <http://www.w3.org/2002/07/owl#members> _:genid15 .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid14 .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid13 .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid12 .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Sentient_Life> .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Place> .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Battle> .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alliance> .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-# 
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
-_:genid16 <http://www.w3.org/2002/07/owl#members> _:genid22 .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid17 <http://www.w3.org/2002/07/owl#members> _:genid21 .
 _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
 _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid18 .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid17 .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Vulcan> .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Romulan> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Sentient_Life> .
 _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Klingon> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Place> .
 _:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Human> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Battle> .
 _:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Ferengi> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alliance> .
 _:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Cardassian> .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid22 <http://www.w3.org/2002/07/owl#members> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Vulcan> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Romulan> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Klingon> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Human> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Ferengi> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Cardassian> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 # 
 # 
 # 
@@ -435,103 +523,103 @@ _:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1
 <urn:swrl:var#p> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
 <urn:swrl:var#alliance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
 <urn:swrl:var#battle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Variable> .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
-_:genid23 <http://www.w3.org/2003/11/swrl#body> _:genid30 .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid25 .
-_:genid25 <http://www.w3.org/2003/11/swrl#arguments> _:genid27 .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "10000"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl:var#c> .
-_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid25 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> .
-<http://www.w3.org/2003/11/swrlb#greaterThan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Builtin> .
-_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid29 .
-_:genid29 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#c> .
-_:genid29 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#b> .
-_:genid29 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasCasualties> .
-_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
-_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid29 <http://www.w3.org/2003/11/swrl#body> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid30 .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid31 .
-_:genid31 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#b> .
-_:genid31 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Battle> .
-_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
-_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid23 <http://www.w3.org/2003/11/swrl#head> _:genid32 .
+_:genid31 <http://www.w3.org/2003/11/swrl#arguments> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
 _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid33 .
-_:genid33 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#b> .
-_:genid33 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Tragedy> .
-_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
-_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
-_:genid34 <http://www.w3.org/2003/11/swrl#body> _:genid39 .
-_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid37 .
-_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid35 .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid36 .
-_:genid36 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#alliance> .
-_:genid36 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Forced> .
-_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
-_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid38 .
-_:genid38 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#alliance> .
-_:genid38 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> .
-_:genid38 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasAlliance> .
-_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
-_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid40 .
-_:genid40 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> .
-_:genid40 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Sentient_Life> .
-_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
-_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid34 <http://www.w3.org/2003/11/swrl#head> _:genid41 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> "10000"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <urn:swrl:var#c> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid31 <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> .
+<http://www.w3.org/2003/11/swrlb#greaterThan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Builtin> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#BuiltinAtom> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid35 .
+_:genid35 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#c> .
+_:genid35 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#b> .
+_:genid35 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasCasualties> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid37 .
+_:genid37 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#b> .
+_:genid37 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Battle> .
+_:genid37 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid29 <http://www.w3.org/2003/11/swrl#head> _:genid38 .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid39 .
+_:genid39 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#b> .
+_:genid39 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Tragedy> .
+_:genid39 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid38 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid40 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid40 <http://www.w3.org/2003/11/swrl#body> _:genid45 .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid43 .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid41 .
 _:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid42 .
-_:genid42 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> .
-_:genid42 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Slave> .
+_:genid42 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#alliance> .
+_:genid42 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Forced> .
 _:genid42 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
 _:genid41 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
-_:genid43 <http://www.w3.org/2003/11/swrl#body> _:genid50 .
-_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid48 .
-_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid46 .
-_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid44 .
-_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid45 .
-_:genid45 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#alliance> .
-_:genid45 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#battle> .
-_:genid45 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasWinner> .
-_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
-_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid47 .
-_:genid47 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#alliance> .
-_:genid47 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> .
-_:genid47 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasAlliance> .
-_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
-_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid49 .
-_:genid49 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#battle> .
-_:genid49 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> .
-_:genid49 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#participates> .
-_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
-_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid44 .
+_:genid44 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#alliance> .
+_:genid44 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> .
+_:genid44 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasAlliance> .
+_:genid44 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid43 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid46 .
+_:genid46 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> .
+_:genid46 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Sentient_Life> .
+_:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid40 <http://www.w3.org/2003/11/swrl#head> _:genid47 .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid48 .
+_:genid48 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> .
+_:genid48 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Slave> .
+_:genid48 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid49 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#Imp> .
+_:genid49 <http://www.w3.org/2003/11/swrl#body> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid54 .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid52 .
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid50 .
+_:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid51 .
-_:genid51 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> .
-_:genid51 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Sentient_Life> .
-_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid51 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#alliance> .
+_:genid51 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#battle> .
+_:genid51 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasWinner> .
+_:genid51 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
 _:genid50 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
-_:genid43 <http://www.w3.org/2003/11/swrl#head> _:genid52 .
-_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid53 .
+_:genid53 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#alliance> .
 _:genid53 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> .
-_:genid53 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Winner> .
-_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid53 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasAlliance> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
 _:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid55 .
+_:genid55 <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#battle> .
+_:genid55 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> .
+_:genid55 <http://www.w3.org/2003/11/swrl#propertyPredicate> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#participates> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid57 .
+_:genid57 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> .
+_:genid57 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Sentient_Life> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
+_:genid49 <http://www.w3.org/2003/11/swrl#head> _:genid58 .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid59 .
+_:genid59 <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#p> .
+_:genid59 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Winner> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

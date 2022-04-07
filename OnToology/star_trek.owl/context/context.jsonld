@@ -4,8 +4,14 @@
       "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#takesPlace",
       "@type" : "@id"
     },
+    "equivalentClass" : {
+      "@id" : "http://www.w3.org/2002/07/owl#equivalentClass"
+    },
     "versionInfo" : {
       "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "created" : {
+      "@id" : "http://purl.org/dc/terms/created"
     },
     "participates" : {
       "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#participates",
@@ -29,6 +35,9 @@
     },
     "Voluntary" : {
       "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Voluntary"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
     "Human" : {
       "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Human"
@@ -67,8 +76,14 @@
       "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasGender",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
+    "creator" : {
+      "@id" : "http://purl.org/dc/elements/1.1/creator"
+    },
     "Characteristics" : {
       "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Characteristics"
+    },
+    "rights" : {
+      "@id" : "http://purl.org/dc/elements/1.1/rights"
     },
     "Battle" : {
       "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Battle"
@@ -84,6 +99,9 @@
     },
     "Planet" : {
       "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Planet"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/elements/1.1/title"
     },
     "hasAlliance" : {
       "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasAlliance",
@@ -133,6 +151,9 @@
     "hasCasualties" : {
       "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasCasualties",
       "@type" : "http://www.w3.org/2001/XMLSchema#integer"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/elements/1.1/description"
     },
     "Klingon" : {
       "@id" : "http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Klingon"
