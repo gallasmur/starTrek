@@ -7,15 +7,47 @@
 @base <http://www.semanticweb.org/user/ontologies/2022/2/star-trek#> .
 
 <http://www.semanticweb.org/user/ontologies/2022/2/star-trek> rdf:type owl:Ontology ;
-                                                               rdfs:comment "Autor: Jose Antonio Rabal Segura" ;
+                                                               <http://purl.org/dc/elements/1.1/creator> "José Antonio Rabal Segura" ;
+                                                               <http://purl.org/dc/elements/1.1/description> "This ontology describe the series Star Trek: The Next Generation, its beings, its planets and its battles." ;
+                                                               <http://purl.org/dc/elements/1.1/rights> "https://creativecommons.org/licenses/by/4.0/legalcode" ;
+                                                               <http://purl.org/dc/terms/created> "04/04/2022" ;
+                                                               <http://purl.org/dc/terms/title> "Star Trek: The Next Generation" ;
                                                                owl:versionInfo 1.0 .
 
 #################################################################
 #    Annotation properties
 #################################################################
 
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/rights
+<http://purl.org/dc/elements/1.1/rights> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2000/01/rdf-schema#sameAs
 rdfs:sameAs rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#equivalentClass
+owl:equivalentClass rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -30,21 +62,24 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
                                      :Sentient_Life
                                    )
                      ] ;
-          rdfs:comment "Representa que una clase de la instancia Battle tiene participantes." .
+          rdfs:comment "Represent the relation between a Battle and its participants." ;
+          rdfs:label "hasActor"@en .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasAlliance
 :hasAlliance rdf:type owl:ObjectProperty ;
              rdfs:domain :Sentient_Life ;
              rdfs:range :Alliance ;
-             rdfs:comment "Representa que un ser puede formar parte de una alianza." .
+             rdfs:comment "Represent the relation between a being and its alliance." ;
+             rdfs:label "hasAlliance"@en .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasBirthPlace
 :hasBirthPlace rdf:type owl:ObjectProperty ;
                rdfs:domain :Sentient_Life ;
                rdfs:range :Quadrant ;
-               rdfs:comment "Representa que un ser tiene que tener un lugar de nacimiento de Clase Place" .
+               rdfs:comment "Represent the relation between a being and its birth place." ;
+               rdfs:label "hasBirthPlace"@en .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasEnemy
@@ -55,20 +90,29 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
                                      :Sentient_Life
                                    )
                      ] ;
-          rdfs:comment "Representa que una alianza puede tener uno o varios enemigos de clase Alliance o Sentient_Life." .
+          rdfs:comment "Represent the relation between an alliance and its enemies, that can be Alliance or Sentient_Life." ;
+          rdfs:label "hasEnemy"@en .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasWinner
 :hasWinner rdf:type owl:ObjectProperty ;
            rdfs:domain :Battle ;
-           rdfs:range :Alliance .
+           rdfs:range [ rdf:type owl:Class ;
+                        owl:unionOf ( :Alliance
+                                      :Sentient_Life
+                                    )
+                      ] ;
+           rdfs:comment "Represent the relation between a battle and the winner." ;
+           rdfs:label "hasWinner"@en .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#isIn
-:isIn rdf:type owl:ObjectProperty ;
+:isIn rdf:type owl:ObjectProperty ,
+               owl:SymmetricProperty ;
       rdfs:domain :Quadrant ;
       rdfs:range :Quadrant ;
-      rdfs:comment "Representa que un lugar contiene a otro, por ejemplo, una ciudad está en un planeta" .
+      rdfs:comment "Represent the relation between a place and where is located. For instance, a city isIn a planet." ;
+      rdfs:label "isIn"@en .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#orbits
@@ -78,22 +122,29 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
                                     :Satellite
                                   )
                     ] ;
-        rdfs:range :Star ;
-        rdfs:comment "Representa que un planeta o satélite orbita una estrella." .
+        rdfs:range [ rdf:type owl:Class ;
+                     owl:unionOf ( :Planet
+                                   :Star
+                                 )
+                   ] ;
+        rdfs:comment "Represent the relation between a Planet or Satellite and the celestial body it orbits." ;
+        rdfs:label "orbits"@en .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#participates
 :participates rdf:type owl:ObjectProperty ;
               rdfs:domain :Sentient_Life ;
               rdfs:range :Battle ;
-              rdfs:comment "Representa que una instancia de la clase Sentient_life puede participar en una batalla" .
+              rdfs:comment "Represent the relation between a being and its participance in a battle." ;
+              rdfs:label "participates"@en .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#takesPlace
 :takesPlace rdf:type owl:ObjectProperty ;
             rdfs:domain :Battle ;
             rdfs:range :Place ;
-            rdfs:comment "Reprenta que una instancia de la Clase Battle tiene un lugar donde se produce." .
+            rdfs:comment "Represent the relation between a battle and the Place where it takes place." ;
+            rdfs:label "takesPlace"@en .
 
 
 #################################################################
@@ -104,14 +155,16 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 :hasCasualties rdf:type owl:DatatypeProperty ;
                rdfs:domain :Battle ;
                rdfs:range xsd:integer ;
-               rdfs:comment "Representa que una instancia de la clase Battle tiene un número de afectados." .
+               rdfs:comment "Represent the number of casualties that happened in a battle." ;
+               rdfs:label "hasCasualties"@en .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#hasGender
 :hasGender rdf:type owl:DatatypeProperty ;
            rdfs:domain :Evolutive_Life ;
            rdfs:range xsd:string ;
-           rdfs:comment "Representa que una instancia de Evolutive_life tiene género." .
+           rdfs:comment "Represent the gender of an instance of Evolutive_life." ;
+           rdfs:label "hasGender"@en .
 
 
 #################################################################
@@ -120,113 +173,137 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alliance
 :Alliance rdf:type owl:Class ;
-          rdfs:comment "Representa una alianza entre distintas formas de vida." .
+          owl:disjointWith :Characteristics ;
+          rdfs:comment "Reprents an alliance between differents forms of life." ;
+          rdfs:label "Alliance"@en .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Android
 :Android rdf:type owl:Class ;
-         rdfs:subClassOf :Artificial_Life .
+         rdfs:subClassOf :Artificial_Life ;
+         rdfs:comment "Represent a kind of artificial life in human form."@es ;
+         rdfs:label "Android"@en .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Artificial_Life
 :Artificial_Life rdf:type owl:Class ;
                  rdfs:subClassOf :Sentient_Life ;
                  owl:disjointWith :Evolutive_Life ;
-                 rdfs:comment "Representa vida creada artificialmente." .
+                 rdfs:comment "Represent life created artificially." ;
+                 rdfs:label "Artificial_Life"@en .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Battle
 :Battle rdf:type owl:Class ;
-        rdfs:comment "Esta clase representa batallas producidas en el universo" .
+        owl:disjointWith :Characteristics ;
+        rdfs:comment "Represents battles that happened in the universe." ;
+        rdfs:label "Battle"@en .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Cardassian
 :Cardassian rdf:type owl:Class ;
             rdfs:subClassOf :Evolutive_Life ;
-            rdfs:comment "Representa a los seres originarios de Cardassia Prime" .
+            rdfs:comment "Represent beings from Cardassia Prime." ;
+            rdfs:label "Cardassian"@en .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Characteristics
 :Characteristics rdf:type owl:Class ;
-                 rdfs:comment "Representa características que se pueden inferir para las instancias de Sentient_life" .
+                 rdfs:comment "Represents characteristics that can be inferred from instances of Sentient_Life." ;
+                 rdfs:label "Characteristics"@en .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#City
 :City rdf:type owl:Class ;
       rdfs:subClassOf :Planet ;
-      rdfs:comment "Representa una ciudad en un planeta." ;
+      rdfs:comment "Represent a city." ;
+      rdfs:label "City"@en ;
       rdfs:sameAs "https://dbpedia.org/ontology/city" .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Evolutive_Life
 :Evolutive_Life rdf:type owl:Class ;
                 rdfs:subClassOf :Sentient_Life ;
-                rdfs:comment "Representa vida orginida a través de la evolución, sin intervención de otros seres." .
+                rdfs:comment "Represent organic life created by evolution." ;
+                rdfs:label "Evolutive_Life"@en .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Ferengi
 :Ferengi rdf:type owl:Class ;
          rdfs:subClassOf :Evolutive_Life ;
-         rdfs:comment "Representa a los seres originarios de Ferenginar" .
+         rdfs:comment "Represent beings from Ferenginar." ;
+         rdfs:label "Ferengi"@en .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Forced
 :Forced rdf:type owl:Class ;
         rdfs:subClassOf :Alliance ;
-        rdfs:comment "Representa una alianza de naturaleza forzada, no libre." .
+        owl:disjointWith :Voluntary ;
+        rdfs:comment "Represents an alliance of forced nature, in opposed to a free one." ;
+        rdfs:label "Forced"@en .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Holograms
 :Holograms rdf:type owl:Class ;
-           rdfs:subClassOf :Artificial_Life .
+           rdfs:subClassOf :Artificial_Life ;
+           rdfs:comment "Represent a kind of artificial life in hologram form."@es ;
+           rdfs:label "Holograms"@en .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Human
 :Human rdf:type owl:Class ;
        rdfs:subClassOf :Evolutive_Life ;
-       rdfs:comment "Representa a los seres originarios del planeta Tierra" .
+       rdfs:comment "Represent beings from Earth." ;
+       rdfs:label "Human"@en .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Klingon
 :Klingon rdf:type owl:Class ;
          rdfs:subClassOf :Evolutive_Life ;
-         rdfs:comment "Representa a los seres originarios de Kronos" .
+         rdfs:comment "Reprsent beings from Kronos." ;
+         rdfs:label "Klingon"@en .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Nebula
 :Nebula rdf:type owl:Class ;
         rdfs:subClassOf :Quadrant ;
-        rdfs:comment "Representa una nube de gas y polvo." .
+        rdfs:comment "Represent a cloud of gas and cosmic dust." ;
+        rdfs:label "Nebula"@en .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Place
 :Place rdf:type owl:Class ;
-       rdfs:comment "Representa lugares en el universo." .
+       rdfs:comment "Represent a place in space." ;
+       rdfs:label "Place"@en .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Planet
 :Planet rdf:type owl:Class ;
         rdfs:subClassOf :Star ;
-        rdfs:comment "Representa cuerpos que orbitan estrellas" ;
+        rdfs:comment "Represent celestial bodies that orbit stars." ;
+        rdfs:label "Planet"@en ;
         rdfs:sameAs "https://dbpedia.org/ontology/Planet" .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Quadrant
 :Quadrant rdf:type owl:Class ;
           rdfs:subClassOf :Place ;
-          rdfs:comment "Representa una galaxia en el univero Star Trek" .
+          rdfs:comment "Represent a galaxy in the Star Trek universe." ;
+          rdfs:label "Quadrant"@en .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Romulan
 :Romulan rdf:type owl:Class ;
          rdfs:subClassOf :Evolutive_Life ;
-         rdfs:comment "Representa a los seres originarios de Romulus" .
+         rdfs:comment "Represent beings from Romulus." ;
+         rdfs:label "Romulan"@en .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Satellite
 :Satellite rdf:type owl:Class ;
            rdfs:subClassOf :Star ;
-           rdfs:comment "Representa cuerpos que orbitan planetas" .
+           rdfs:comment "Represent celestial bodies that orbit planets." ;
+           rdfs:label "Satellite"@en .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Sentient_Life
@@ -236,38 +313,44 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                  owl:onClass :Quadrant
                                ] ;
-               rdfs:comment "Representa una forma de vida inteligente." .
+               rdfs:comment "Represent an intelligent being." ;
+               rdfs:label "Sentient_Life"@en .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Slave
 :Slave rdf:type owl:Class ;
        rdfs:subClassOf :Characteristics ;
-       rdfs:comment "Representa una instancia de sentient_life que pertenece a una alianza forzada" .
+       rdfs:comment "Represents an instace of Sentient_Life who is enrolled in a forced alliance." ;
+       rdfs:label "Slave"@en .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Spacial_Station
 :Spacial_Station rdf:type owl:Class ;
                  rdfs:subClassOf :Quadrant ;
-                 rdfs:comment "Representa una estación espacial creado por seres vivos." .
+                 rdfs:comment "Represent a spacial station created by beings." ;
+                 rdfs:label "Spacial_Station"@en .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Star
 :Star rdf:type owl:Class ;
       rdfs:subClassOf :Quadrant ;
-      rdfs:comment "Representa el tipo de astro estrella" ;
+      rdfs:comment "Represent the kind of celestial object stars." ;
+      rdfs:label "Star"@en ;
       rdfs:sameAs "https://dbpedia.org/ontology/Star" .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Tragedy
 :Tragedy rdf:type owl:Class ;
          rdfs:subClassOf :Battle ;
-         rdfs:comment "Representa un tipo de batalla con muchas bajas" .
+         rdfs:comment "Represents a battle with a lot of casualties." ;
+         rdfs:label "Tragedy"@en .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Voluntary
 :Voluntary rdf:type owl:Class ;
            rdfs:subClassOf :Alliance ;
-           rdfs:comment "Representa una alianza libre entre seres." .
+           rdfs:comment "Represents a free alliance between beings." ;
+           rdfs:label "Voluntary"@en .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Vulcan
@@ -278,13 +361,15 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Winner
 :Winner rdf:type owl:Class ;
         rdfs:subClassOf :Characteristics ;
-        rdfs:comment "Representa a una instancia de Sentient_life que ha ganado una batalla" .
+        rdfs:comment "Represents an instance of Sentient_life who won a battle." ;
+        rdfs:label "Winner"@en .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Wormhole
 :Wormhole rdf:type owl:Class ;
           rdfs:subClassOf :Place ;
-          rdfs:comment "Representa un \"camino\" entre distintos cuadrantes del universo" .
+          rdfs:comment "Represent a \"way\" between different quadrants in the universe." ;
+          rdfs:label "Wormhole"@en .
 
 
 #################################################################
@@ -293,8 +378,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Alpha
 :Alpha rdf:type owl:NamedIndividual ,
-                :Quadrant ;
-       :isIn :Alpha .
+                :Quadrant .
 
 
 ###  http://www.semanticweb.org/user/ontologies/2022/2/star-trek#Beta
@@ -331,7 +415,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 :Jean-Luc_Picard rdf:type owl:NamedIndividual ,
                           :Human ;
                  :hasAlliance :Federation ;
-                 :hasBirthPlace :Earth ;
+                 :hasBirthPlace :La_Barre ;
                  :participates :The_Best_of_both_Worlds ;
                  :hasGender "male" .
 
@@ -394,11 +478,15 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 #    Annotations
 #################################################################
 
-:Vulcan rdfs:comment "Representa a los seres originarios de Vulcan" .
+:Vulcan rdfs:comment "Represent beings from Vulcan." ;
+        rdfs:label "Vulcan"@en .
 
 
 owl:Thing rdfs:comment """La ontologia trata sobre la serie Star Trek: The Next Generation
 Autor: Jose Antonio Rabal Segura""" .
+
+
+owl:versionInfo owl:versionInfo 1.0 .
 
 
 #################################################################
